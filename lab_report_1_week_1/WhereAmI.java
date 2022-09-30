@@ -1,4 +1,4 @@
-package lab_report_1;
+package lab_report_1_week_1;
 class WhereAmI {
     public static void main(String[] args) {
       System.out.println(System.getProperty("os.name"));
