@@ -73,7 +73,7 @@ methods called (Handler): `handleRequest`, `url.getPath().equals`, `url.getQuery
 method arguments value: `handleRequest("http://localhost:4000/add?s=bunny")`, `url.getPath().equals("/add")`, `parameters={s, bunny}`, `parameters[0].equals("s")`, `data.add(bunny)`, `String.format("Entry bunny being added.");`<br>
 field value changed: `data={"bunny"}`, `data={"bunny", "debunk"}`, `data={"bunny", "debunk", "chica"}`<br>
 
-Query
+Query<br>
 ![web5](web5.png)<br>
 methods called (Handler): `url.getPath().equals`, `url.getQuery().split`, `parameters[0].equals`, `data.size`, `data.get(i).contains`, `matches.add`, `data.get`, `matches.toString().replace`<br>
 method arguments value: `handleRequest("http://localhost:4000/search?s=bun")`, `url.getPath().equals("/search")`, `parameters={s, bun}`, `parameters[0].equals("s")`, `data.size()`, `data={"bunny", "debunk", "chica"}`, `data.get(i).contains("bun")`, `matches.add("bunny") & matches.add("debunk")`, `matches={"bunny", "debunk"}`<br>
