@@ -1,4 +1,3 @@
-package Java;
 import java.io.IOException;
 import java.net.URI;
 import java.io.*;
@@ -7,6 +6,7 @@ import java.util.*;
 class Handler implements URLHandler {
     String s = "";  // search string
     Vector<String> data = new Vector<String>();
+    ArrayList <String> words = new ArrayList <String>();
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
@@ -19,9 +19,11 @@ class Handler implements URLHandler {
         else if (url.getPath().equals("/add")){
             String[] parameters = url.getQuery().split("=");
             if (parameters[0].equals("s")) {
-                data.add(parameters[1]);    // add to data
+                this.data.add(parameters[1]);    // add to data
+                this.words.add(parameters[1]);
                 return String.format("Entry %s being added.", parameters[1]);
             }
+            return "something";
         }
         else if (url.getPath().equals("/search")) {
             String[] parameters = url.getQuery().split("=");
@@ -30,6 +32,13 @@ class Handler implements URLHandler {
                 for(int i=0; i<data.size(); i++){
                     if(data.get(i).contains(parameters[1])) {
                         matches.add(data.get(i));
+                    }
+                }
+                String searchReturn = "";
+                for(String x: words) {
+                    if(x.contains(parameters[1])) {
+                        searchReturn += x;
+                        searchReturn += "and";
                     }
                 }
                 return matches.toString().replace("[", "").replace("]", "");
