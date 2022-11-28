@@ -26,8 +26,8 @@ Keypress: `/` `C` `<Enter>` `e` `a` `2` `<Esc>`
 `d` `w`: Delete the rest of the word and left only tax <br>
 ![10](images/10.png) <br>
 `:wq`: Save and exit the file <br>
-![11](images/11.png): Execute the command <br>
-`<Enter>` <br>
+![11](images/11.png) <br>
+`<Enter>`: Execute the command <br> <br>
 
 Part 2
 1. Edit content of `test.sh` to `echo "Hello World!"` <br>
@@ -41,4 +41,4 @@ Part 2
 
 - I would prefer the second way that I don't need to copy and paste the file after I make the changes, and because it is faster.
 
-- Most of the time I would want to use the first way if I can only run the file remotely, unless maybe if there are too many edits I need to make and I am more comfortable editing codes using VSCodes plus I don't want to make mistakes when copy pasting the codes I would probably use the first way. 
+- Most of the time I would want to use the second way if I can only run the file remotely, unless maybe if there are too many edits I need to make and I am more comfortable editing codes using VSCodes plus I don't want to make mistakes when copy pasting the codes I would probably use the first way. 
